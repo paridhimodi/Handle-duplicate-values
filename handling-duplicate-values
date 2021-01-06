@@ -1,0 +1,15 @@
+# import pandas 
+import pandas as pd
+
+# Read dataset
+df = pd.read_csv('file.csv')
+
+# Display data
+df.head()
+
+# Identifying duplicate values in the dataset 
+dup = df['col'].Duplicated()
+df[dup]
+
+# Removing duplicates 
+df.drop_duplicates(keep='first')
